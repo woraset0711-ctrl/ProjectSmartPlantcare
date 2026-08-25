@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #d8f3dc, #ffffff, #b7e4c7);
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ===== พื้นหลังมีชีวิตชีวา ===== */
+.bg-decor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.leaf {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.35;
+    animation: floatLeaf 8s ease-in-out infinite;
+}
+
+.leaf1 { top: 8%;  left: 6%;  font-size: 50px; animation-delay: 0s; }
+.leaf2 { top: 20%; right: 8%; font-size: 35px; animation-delay: 1.5s; }
+.leaf3 { top: 55%; left: 4%;  font-size: 30px; animation-delay: 3s; }
+.leaf4 { top: 70%; right: 6%; font-size: 45px; animation-delay: 2s; }
+.leaf5 { top: 40%; right: 15%; font-size: 25px; animation-delay: 4s; }
+.leaf6 { top: 85%; left: 12%; font-size: 32px; animation-delay: 0.8s; }
+
+@keyframes floatLeaf {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(8deg); }
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.logo-text h1 {
+    color: #2e7d32;
+    font-size: 24px;
+}
+
+.logo-text p {
+    color: #666;
+    font-size: 14px;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 50px 36px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #2e7d32;
+    font-size: 28px;
+}
+
+.card p {
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.mascot-wrap {
+    margin: 25px 0;
+}
+
+.mascot-wrap .mascot {
+    max-width: 160px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #43a047, #81c784);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+@keyframes swing {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+/* ===== จอเล็กมาก (มือถือจอแคบ) ===== */
+@media (max-width: 360px) {
+    .card {
+        padding: 40px 24px;
+    }
+
+    .mascot-wrap .mascot {
+        max-width: 120px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+}
+
+/* ===== แท็บเล็ต (iPad ฯลฯ 768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 560px;
+    }
+
+    .logo-icon {
+        width: 68px;
+        height: 68px;
+        font-size: 36px;
+    }
+
+    .logo-text h1 {
+        font-size: 28px;
+    }
+
+    .logo-text p {
+        font-size: 15px;
+    }
+
+    .card {
+        padding: 55px 60px;
+    }
+
+    .card h2 {
+        font-size: 30px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .mascot-wrap .mascot {
+        max-width: 190px;
+    }
+
+    button {
+        font-size: 19px;
+        padding: 17px;
+    }
+}
+
+/* ===== เดสก์ท็อป (1024px ขึ้นไป) ===== */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 520px;
+    }
+
+    .logo-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 38px;
+    }
+
+    .logo-text h1 {
+        font-size: 30px;
+    }
+
+    .logo-text p {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 50px 60px;
+    }
+
+    .card h2 {
+        font-size: 32px;
+    }
+
+    .card p {
+        font-size: 17px;
+    }
+
+    .mascot-wrap .mascot {
+        max-width: 210px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 18px;
+    }
+}
