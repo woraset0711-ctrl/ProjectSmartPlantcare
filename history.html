@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Plant Care - ประวัติ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../frontend/historystyle.css">
+</head>
+
+<body>
+
+<div class="bg-decor">
+    <span class="leaf leaf1">🌿</span>
+    <span class="leaf leaf2">🍃</span>
+    <span class="leaf leaf3">🌸</span>
+    <span class="leaf leaf4">🌱</span>
+    <span class="leaf leaf5">🍀</span>
+    <span class="leaf leaf6">🌿</span>
+</div>
+
+<div class="phone">
+    <div class="container">
+
+        <div class="navbar">
+            <div class="menu-icon" onclick="openMenu()">☰</div>
+            <div class="bell-icon">🔔</div>
+        </div>
+
+        <div class="title-row">
+            <h1>ประวัติ</h1>
+            <span class="calendar-icon">📅</span>
+        </div>
+
+        <div class="date-filter" onclick="document.getElementById('datePicker').showPicker()">
+            <span>📅</span>
+            <span class="date-text" id="selectedDateText">กำลังโหลด...</span>
+            <span class="arrow-down">⌄</span>
+            <input type="date" id="datePicker" class="hidden-date-input">
+        </div>
+
+        <div class="history-frame">
+        <div class="history-list" id="historyList">
+        <!-- รายการจะถูกสร้างด้วย JS ตามวันที่เลือก -->
+    </div>
+</div>
+    </div>
+</div>
+
+<!-- เมนูแถบข้าง -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">🌿</div>
+        <div class="sidebar-title">
+            <h3>Smart Plant</h3>
+            <p>ระบบรดน้ำต้นไม้อัตโนมัติ</p>
+        </div>
+    </div>
+
+    <div class="sidebar-menu">
+        <a href="home.html" class="menu-item">
+            <span>🏠</span> หน้าหลัก
+        </a>
+        <a href="history.html" class="menu-item active">
+            <span>🕐</span> ประวัติ
+        </a>
+        <a href="settings.html" class="menu-item">
+            <span>⚙️</span> ตั้งค่า
+        </a>
+        <a href="about.html" class="menu-item">
+            <span>ℹ️</span> เกี่ยวกับ
+        </a>
+    </div>
+
+    <a href="index.html" class="menu-item logout">
+        <span>↪</span> ออกจากระบบ
+    </a>
+</div>
+
+<script src="../script/apiscript.js"></script>
+<script src="../script/historyscript.js"></script>
+
+</body>
+</html>

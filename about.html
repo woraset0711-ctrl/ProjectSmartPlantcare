@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Plant Care - เกี่ยวกับ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../frontend/aboutstyle.css">
+</head>
+
+<body>
+
+    <div class="bg-decor">
+    <span class="leaf leaf1">🌿</span>
+    <span class="leaf leaf2">🍃</span>
+    <span class="leaf leaf3">🌸</span>
+    <span class="leaf leaf4">🌱</span>
+    <span class="leaf leaf5">🍀</span>
+    <span class="leaf leaf6">🌿</span>
+</div>
+
+<div class="phone">
+
+    <div class="topnav">
+        <a href="home.html" class="back-btn">←</a>
+        <h1>เกี่ยวกับ</h1>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="app-info">
+        <div class="app-icon">🪴</div>
+        <h2>Smart Plant</h2>
+        <p class="app-desc">ระบบรดน้ำต้นไม้อัตโนมัติ</p>
+        <p class="app-desc-sub">ด้วย Arduino ESP32 WiFi</p>
+        <span class="version-badge">เวอร์ชัน 1.0.0</span>
+    </div>
+
+    <p class="section-label">ติดต่อผู้พัฒนา</p>
+    <div class="contact-card">
+
+        <a href="mailto:developer@smartplant.com" class="contact-row">
+            <div class="contact-icon icon-mail">✉️</div>
+            <div class="contact-text">
+                <p class="contact-title">อีเมล</p>
+                <p class="contact-value">superjiw0711@gmail.com</p>
+            </div>
+            <span class="chevron">›</span>
+        </a>
+
+        <div class="divider"></div>
+
+        <a href="tel:0800000000" class="contact-row">
+            <div class="contact-icon icon-phone">📞</div>
+            <div class="contact-text">
+                <p class="contact-title">โทรศัพท์</p>
+                <p class="contact-value">096-984-5882</p>
+            </div>
+            <span class="chevron">›</span>
+        </a>
+
+        <div class="divider"></div>
+
+        <a href="https://github.com/" target="_blank" class="contact-row">
+            <div class="contact-icon icon-github">💻</div>
+            <div class="contact-text">
+                <p class="contact-title">GitHub</p>
+                <p class="contact-value">github.com/smartplant</p>
+            </div>
+            <span class="chevron">›</span>
+        </a>
+
+        <div class="divider"></div>
+
+        <a href="https://line.me/" target="_blank" class="contact-row">
+            <div class="contact-icon icon-line">💬</div>
+            <div class="contact-text">
+                <p class="contact-title">Line Official</p>
+                <p class="contact-value">worasitjiw0711111111</p>
+            </div>
+            <span class="chevron">›</span>
+        </a>
+
+    </div>
+
+    <p class="footer-note">พัฒนาโดยทีม Smart Plant Care © 2569</p>
+
+</div>
+
+<!-- เมนูแถบข้าง -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">🌿</div>
+        <div class="sidebar-title">
+            <h3>Smart Plant</h3>
+            <p>ระบบรดน้ำต้นไม้อัตโนมัติ</p>
+        </div>
+    </div>
+
+    <div class="sidebar-menu">
+        <a href="home.html" class="menu-item">
+            <span>🏠</span> หน้าหลัก
+        </a>
+        <a href="history.html" class="menu-item">
+            <span>🕐</span> ประวัติ
+        </a>
+        <a href="settings.html" class="menu-item">
+            <span>⚙️</span> ตั้งค่า
+        </a>
+        <a href="about.html" class="menu-item active">
+            <span>ℹ️</span> เกี่ยวกับ
+        </a>
+    </div>
+
+    <a href="index.html" class="menu-item logout">
+        <span>↪</span> ออกจากระบบ
+    </a>
+</div>
+
+<script src="../script/aboutscript.js"></script>
+
+</body>
+</html>
